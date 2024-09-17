@@ -42,6 +42,52 @@
         left: -123% !important;
     }
 } */
+  /* Basic styling for portfolio section */
+.portfolio .portfolio-content {
+  position: relative;
+}
+
+.portfolio .portfolio-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.portfolio .portfolio-info h4 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.portfolio .portfolio-info a {
+  color: #fff;
+  margin: 0 5px;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive styling */
+@media (max-width: 1200px) {
+  .portfolio .col-lg-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 992px) {
+  .portfolio .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
 </style>
 
 <body class="index-page">
@@ -400,202 +446,87 @@
     </section><!-- /Resume Section -->
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section light-background">
+   <section id="portfolio" class="portfolio section light-background">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-        <p>Explore my portfolio to see a range of web development work. Each project showcases my commitment to creating
-          engaging and effective digital experiences.</p>
-      </div><!-- End Section Title -->
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Portfolio</h2>
+    <p>Explore my portfolio to see a range of web development work. Each project showcases my commitment to creating engaging and effective digital experiences.</p>
+  </div><!-- End Section Title -->
 
-      <div class="container">
+  <div class="container">
+    <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+      <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+        <li data-filter="*" class="filter-active">All</li>
+        <li data-filter=".filter-app">App</li>
+        <li data-filter=".filter-website">Website</li>
+        <li data-filter=".filter-webapplication">Web Application</li>
+      </ul><!-- End Portfolio Filters -->
 
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-website">Website</li>
-            <li data-filter=".filter-webapplication">Web Application</li>
-          </ul><!-- End Portfolio Filters -->
+      <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-website">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/AndneticsFull1.png" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Website 1</h4>
+              <a href="assets/img/Andneticspage.png" title="Andnetics" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="https://andnetics.in/" title="Andnetics" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-website">
-              <div class="portfolio-content h-100">
-                <img style="height: 25rem;" src="assets/img/AndneticsFull1.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Website 1</h4>
-                  <a href="assets/img/Andneticspage.png" title="Andnetics" data-gallery="portfolio-gallery-app"
-                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://andnetics.in/" title="Andnetics" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-website">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Nirman.png" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Website 2</h4>
+              <a href="assets/img/NirmanFull.png" title="Nirman Infratech Solutions" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="https://www.infratechnirman.com/" title="Nirman Infratech Solutions" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-website">
-              <div class="portfolio-content h-100">
-                <img style="height: 25rem;" src="assets/img/Nirman.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Website 2</h4>
-                  <a href="assets/img/NirmanFull.png" title="Nirman Infratech Solutions"
-                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                      class="bi bi-zoom-in"></i></a>
-                  <a href="https://www.infratechnirman.com/" title="Nirman Infratech Solutions" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-website">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/Alelham.png" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Website 3</h4>
+              <a href="assets/img/AlelhamFull.png" title="Al Elham Health Care" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="https://alelhamhealthcare.in/" title="Al Elham Health Care" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-website">
-              <div class="portfolio-content h-100">
-                <img style="height: 25rem;" src="assets/img/Alelham.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Website 3</h4>
-                  <a href="assets/img/AlelhamFull.png" title="Al Elham Health Care"
-                    data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                      class="bi bi-zoom-in"></i></a>
-                  <a href="https://alelhamhealthcare.in/" title="Al Elham Health Care" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-webapplication">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/ResumeFull1.png" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Web Application</h4>
+              <a href="assets/img/ResumeFull.png" title="Resume Builder" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-webapplication">
-              <div class="portfolio-content h-100">
-                <img style="height: 25rem;" src="assets/img/ResumeFull1.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Web Application</h4>
-                  <a href="assets/img/ResumeFull.png" title="Resume Builder" data-gallery="portfolio-gallery-book"
-                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-webapplication">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/FoodFull.png" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Web Application</h4>
+              <a href="assets/img/FoodFull.png" title="Food Delivery App" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
 
-            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app-2.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>App 2</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/app-2.jpg" title="App 2" data-gallery="portfolio-gallery-app"
-                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div> -->
+      </div><!-- End Portfolio Container -->
 
-            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/product-2.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Product 2</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/product-2.jpg" title="Product 2"
-                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                      class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div> -->
+    </div>
+  </div>
 
-            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/branding-2.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Branding 2</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/branding-2.jpg" title="Branding 2"
-                    data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                      class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div> -->
-
-            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/books-2.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Books 2</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/books-2.jpg" title="Branding 2" data-gallery="portfolio-gallery-book"
-                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div> -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-webapplication">
-              <div class="portfolio-content h-100">
-                <img style="height: 25rem; width: 100%;" src="assets/img/FoodFull.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Web Application</h4>
-                  <a href="assets/img/FoodFull.png" title="Food Delivery App" data-gallery="portfolio-gallery-app"
-                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/product-3.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Product 3</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/product-3.jpg" title="Product 3"
-                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                      class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div> -->
-
-            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/branding-3.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Branding 3</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/branding-3.jpg" title="Branding 2"
-                    data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                      class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div> -->
-
-            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/books-3.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Books 3</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/books-3.jpg" title="Branding 3" data-gallery="portfolio-gallery-book"
-                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                      class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div> -->
-
-          </div><!-- End Portfolio Container -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Portfolio Section -->
+</section><!-- /Portfolio Section -->
 
     <!-- Services Section -->
     <section id="services" class="services section">
