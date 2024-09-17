@@ -87,6 +87,61 @@
     max-width: 100%;
   }
 }
+  .whatsapp-button {
+    position: fixed;
+    bottom: 20px; /* Bottom distance */
+    right: 20px; /* Right distance */
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* WhatsApp logo style */
+  .whatsapp-button img {
+    width: 35px;
+    height: 35px;
+  }
+  
+  /* Hover effect */
+  .whatsapp-button:hover {
+    background-color: #128C7E;
+    transform: scale(1.1); /* Slight scale-up on hover */
+  }
+  
+  /* Responsive styling for smaller screens */
+  @media (max-width: 768px) {
+    .whatsapp-button {
+        width: 50px;
+        height: 50px;
+        bottom: 4rem;
+    }
+  
+    .whatsapp-button img {
+        width: 30px;
+        height: 30px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .whatsapp-button {
+        width: 45px;
+        height: 45px;
+        bottom: 3rem;
+    }
+  
+    .whatsapp-button img {
+        width: 25px;
+        height: 25px;
+    }
+  }
+
 
 </style>
 
@@ -589,6 +644,12 @@
 
     </section><!-- /Services Section -->
 
+<!--Whatsapp  -->
+    <a href="https://wa.me/7888421434" class="whatsapp-button" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
+</a>
+<!--Whatsapp End-->
+    
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials section light-background">
 
@@ -741,7 +802,7 @@
               <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
                 <i class="bi bi-envelope flex-shrink-0"></i>
                 <div>
-                  <h3>Email Us</h3>
+                  <h3>Email Me</h3>
                   <p>aryan912001@gmail.com</p>
                 </div>
               </div><!-- End Info Item -->
@@ -817,6 +878,11 @@
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
+   <script>
+            function openWhatsApp() {
+                window.open('https://api.whatsapp.com/send?phone=9120010883', '_blank');
+            }
+        </script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
